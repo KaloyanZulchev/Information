@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Git Hub Project</title>
+</head>
+
+<body>
+    <form>
+        <div class="register-form-container">
+            <h1>Registration</h1>
+            <label for="username"><b>Username</b></label>
+            <input type="text" id="username-input" placeholder="Enter Username" name="uname" required>
+
+            <label for="password"><b>Password</b></label>
+            <input type="password" id="password-input" placeholder="Enter Password" name="psw" required>
+
+            <button type="button" id="register-button" onclick="register()">Register</button>
+        </div>
+    </form>
+    <br>
+    <form>
+        <div class="login-form-container">
+            <h1>Login</h1>
+            <label for="username"><b>Username</b></label>
+            <input type="text" id="username-input" placeholder="Enter Username" name="uname" required>
+
+            <label for="password"><b>Password</b></label>
+            <input type="password" id="password-input" placeholder="Enter Password" name="psw" required>
+
+            <button type="button" id="login-button" onclick="userLogin()">Login</button>
+            <button type="button" id="logout" onclick="userLogout()">Logout</button>
+        </div>
+    </form>
+    <!-- TO DO list -->
+    <div id="to-do-list-wrapper">
+        
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-database.js"></script>
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyAU7u-8k_cAgyJ4h0xuDi4USGZ4ALhkYfY",
+    authDomain: "github---site.firebaseapp.com",
+    databaseURL: "https://github---site.firebaseio.com",
+    projectId: "github---site",
+    storageBucket: "github---site.appspot.com",
+    messagingSenderId: "421580466904",
+    appId: "1:421580466904:web:0c484763475b24301e85ad"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  
+  const auth = firebase.auth();
+</script>
+    <script src="scripts/register.js"></script>
+    <script src="scripts/auth.js"></script>
+    <script src="scripts/logout.js"></script>
+    <script src="scripts/login.js"></script>
+</body>
+
+</html>
